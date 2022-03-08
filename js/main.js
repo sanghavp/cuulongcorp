@@ -1,3 +1,4 @@
+// Slider
 $('.most-product-items').slick({
    dots: false,
    infinite: true,
@@ -35,3 +36,9 @@ $('.most-product-items').slick({
      
    ]
  });
+
+//  Scroll on top
+$(".btn-ontop").click(() => {
+  $("html, body").animate({ scrollTop: "0" }, 1000);
+    return false;
+})
