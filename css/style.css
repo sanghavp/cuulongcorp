@@ -177,3 +177,98 @@ header{
 .workEnvironment-desc p{
    margin-bottom: 42px;
 }
+/* Most Product*/
+.most-product-items{
+   display: flex;
+   flex-wrap: nowrap;
+   flex-direction: row;
+   margin-left: -15px;
+   /* overflow: hidden; */
+   width: 100%;
+}
+.most-product-item{
+   background-color: #F0FCFB;
+   margin: 0 15px;
+}
+.most-product-item img{
+   display: block;
+   margin: 0 auto;
+}
+.most-product-item b.product-name{
+   display: block;
+   font-size: 16px;
+   text-align: center;
+   margin-bottom: 7px;
+}
+/* custom slick slider */
+.slider{
+   display: flex;
+   flex-wrap: wrap;
+   /* gap: 20px; */
+   margin-left: 10px;
+}
+.slider-item{
+   width: calc(25% - 20px);
+   margin: 0 10px;
+   padding-bottom: 30px;
+}
+.slider-image{
+   width: 90%;
+   object-fit: cover;
+   margin: 0 auto;
+}
+.slider-content{
+   text-align: center;
+}
+.slick-dots{
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   padding: 0;
+   margin: 0;
+   display: flex !important;
+   align-items: center;
+   justify-content: center;
+}
+.slick-dots li{
+   list-style: none;
+   margin: 0 5px;
+   
+}
+.slick-dots li i{
+   border: none;
+   border-radius: 100rem;
+   font-size: 0;
+   width: 15px;
+   height: 15px;
+   transition: all 0.2s ease;
+   background-color: #ccc;
+
+}
+.slick-dots li.slick-active button{
+   background-color: greenyellow;
+}
+.slick-arrow{
+	position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+	/* font-size: 0; */
+	padding: 10px;
+	border: none;
+	background-color: transparent;
+	/* transform: translateY(-50%); */
+	z-index: 5;
+}
+.fa-angle-left{
+	left: -16px;
+   z-index: 222;
+}
+.fa-angle-right{
+	right: -16px;
+   z-index: 222;
+}
+.slick-arrow:hover {
+	background-color: turquoise;
+   color: #fff;
+}
