@@ -16,9 +16,9 @@ $('.most-product-items').slick({
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
+        dots: false,
         infinite: true,
-        dots: true,
-        arrows: false
+        arrows: true
       }
     },
     {
@@ -26,6 +26,7 @@ $('.most-product-items').slick({
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
+        dots: true,
         arrows: false
       }
     },
@@ -34,20 +35,32 @@ $('.most-product-items').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        dots: true,
         arrows: false
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
 });
+// sticky menu
+$(window).scroll((e) => {
+  const heightMenu = $(".menu").offset();
+  const heightScroll = $("html, body").scrollTop();
+  if(heightScroll >= heightMenu.top){
+    $(".menu").addClass(".sticky");
+  }
+})
 
 //  Scroll on top
 $(".btn-ontop").click(() => {
   $("html, body").animate({ scrollTop: "0" }, 1000);
     return false;
 })
-if(window.pageYOffset > 300){
-  // alert("test");
-}
+//  Show/hide button on the top
+$(window).scroll(function(e) {
+  const heightScroll = $("html, body").scrollTop();
+  if(heightScroll > 500){
+    $(".btn-ontop").show();
+  }else{
+    $(".btn-ontop").hide();
+  }
+})
