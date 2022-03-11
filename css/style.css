@@ -32,6 +32,7 @@ a:hover{
 }
 .container{
    max-width: 1110px;
+   padding: 0;
 }
 /* Header */
 header{
@@ -68,7 +69,10 @@ header{
 .header-social img{
    display: block;
    margin-right: 23px;
-
+}
+.header-social option{
+   background-color: #000000;
+   color: var(--secondary-color);
 }
 /* End Header */
 
@@ -86,17 +90,10 @@ header{
 }
 .main-menu{
    display: flex;
-   /* justify-content: flex-end; */
    align-items: center;
-   z-index: 3;
 }
 .btn-search{
    margin-left: 21px;
-}
-.main-menu{
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
 }
 .menu-items{
    display: flex;
@@ -492,6 +489,51 @@ header{
 
 /* Resposive */
 @media only screen and (max-width: 992px) {
+   header{
+      display: none;
+   }
+   .menu{
+      margin: 10px 10px 0 10px;
+
+   }
+   .main-menu{
+      width: 100%;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      align-items: flex-start;
+   }
+   .menu-items{
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      color: var(--secondary-color);
+      padding: 0;
+   }
+   .menu-items li{
+      margin-right: 0;
+      width: 100%;
+   }
+   .menu-item{
+      width: 100%;
+      padding: 0 !important;
+   }
+   .menu-active, .menu-item:hover{
+      color: var(--secondary-color);
+   }
+   .form{
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+   }
+   .btn-search{
+      position: absolute;
+      right: 0;
+      margin-left: 0;
+   }
+   .form-search{
+      display: block;
+      margin-left: -10px;
+   }
    .fa-angle-left{
       left: 0;
       z-index: 222;
@@ -538,51 +580,6 @@ header{
    }
 }
 @media only screen and (max-width: 768px) {
-   header{
-      display: none;
-   }
-   .menu{
-      margin: 10px 10px 0 10px;
-
-   }
-   .main-menu{
-      width: 100%;
-      flex-direction: column;
-      background-color: var(--primary-color);
-      align-items: flex-start;
-   }
-   .menu-items{
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-      color: var(--secondary-color);
-      padding: 0;
-   }
-   .menu-items li{
-      margin-right: 0;
-      width: 100%;
-   }
-   .menu-item{
-      width: 100%;
-      padding: 0 !important;
-   }
-   .menu-active, .menu-item:hover{
-      color: var(--secondary-color);
-   }
-   .form{
-      width: 90%;
-      margin: 0 auto;
-      position: relative;
-   }
-   .btn-search{
-      position: absolute;
-      right: 0;
-      margin-left: 0;
-   }
-   .form-search{
-      display: block;
-      margin-left: -10px;
-   }
    .compact-intro{
       padding: 0 10px;
    }
