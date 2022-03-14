@@ -128,6 +128,10 @@ header{
 .banner{
    display: block;
 }
+.banner img{
+   width: 100%;
+   height: calc(525/1440 * 100vw)px;
+}
 /* End banner */
 /* Compact itroduction begin */
 .compact-intro{
